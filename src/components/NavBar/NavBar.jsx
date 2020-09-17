@@ -31,7 +31,7 @@ export default class NavBar extends Component {
           active={activeItem === 'testimonials'}
           onClick={this.handleItemClick}
         >
-          <a href="/add-cheese">Add Cheese</a>
+          <a href="/addcheese">Add Cheese</a>
         </Menu.Item>
 
         <Menu.Item
