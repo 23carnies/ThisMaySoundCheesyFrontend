@@ -1,12 +1,13 @@
 import React from 'react';
 import './CheeseListPage.css'
 import CheeseCard from '../../components/CheeseCard/CheeseCard'
+import { Card } from 'semantic-ui-react';
 
 const CheeseListPage = (props) => {
   return ( 
     <>
       <h1>Cheese List</h1>
-      <div>
+      <Card.Group itemsPerRow={4}>
         {props.cheeses.map(cheese =>
             <CheeseCard 
               key={cheese._id}
@@ -15,7 +16,7 @@ const CheeseListPage = (props) => {
               user={props.user}
             />
         )}
-      </div>
+      </Card.Group>
     </>
    );
 }
