@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Button, Form } from 'semantic-ui-react'
+import './addcheese.css'
 
 class AddCheese extends Component {
   state = {
@@ -37,7 +38,7 @@ class AddCheese extends Component {
 
   render() {
     return (
-        <>
+        <div>
         <Form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
         <h1>Add Cheese</h1>
           <Form.Field>
@@ -133,7 +134,7 @@ class AddCheese extends Component {
             ADD CHEESE
           </Button>
         </Form>
-        </>
+        </div>
     );
   }
 }
