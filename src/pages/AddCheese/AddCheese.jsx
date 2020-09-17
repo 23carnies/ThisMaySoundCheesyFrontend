@@ -4,7 +4,7 @@ import './addcheese.css'
 
 class AddCheese extends Component {
   state = {
-    invalidForm: false,
+    invalidForm: true,
     formData: {
           name: '',
           category: '',
@@ -19,22 +19,21 @@ class AddCheese extends Component {
         }
   };
 
-  formRef = React.createRef();
-
+  
   handleSubmit = e => {
     e.preventDefault();
     // We will write the handleAddCheese function in our App.js after this step...
     this.props.handleAddCheese(this.state.formData);
   };
-
+  
   handleChange = e => {
     const formData = {...this.state.formData, [e.target.name]: e.target.value};
     this.setState({
       formData,
-      invalidForm: !this.formRef.current.checkValidity()
     });
   };
-
+  
+  formRef = React.createRef();
 
   render() {
     return (
@@ -128,8 +127,8 @@ class AddCheese extends Component {
           </Form.Field>
           <Button
             type="submit"
-            className="btn"
-            disabled={this.state.invalidForm}
+
+            
           >
             ADD CHEESE
           </Button>
