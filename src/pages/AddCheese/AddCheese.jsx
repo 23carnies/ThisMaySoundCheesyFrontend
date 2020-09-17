@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class AddCheesePage extends Component {
+class AddCheese extends Component {
   state = {
     invalidForm: true,
     formData: {
@@ -144,4 +144,4 @@ class AddCheesePage extends Component {
   }
 }
 
-export default AddCheesePage;
+export default AddCheese;
