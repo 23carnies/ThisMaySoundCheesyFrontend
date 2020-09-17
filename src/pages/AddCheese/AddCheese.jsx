@@ -43,17 +43,14 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Cheese Name</label>
             <input
- 
               name="name"
               value={this.state.formData.name}
               onChange={this.handleChange}
-              required
             />
           </Form.Field>
           <Form.Field>
             <label>Category(required)</label>
             <input
- 
               name="category"
               value={this.state.formData.category}
               onChange={this.handleChange}
@@ -63,7 +60,6 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Country</label>
             <input
- 
               name="country"
               value={this.state.formData.country}
               onChange={this.handleChange}
@@ -72,7 +68,6 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Brand</label>
             <input
- 
               name="brand"
               value={this.state.formData.brand}
               onChange={this.handleChange}
@@ -81,7 +76,6 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Color</label>
             <input
- 
               name="color"
               value={this.state.formData.color}
               onChange={this.handleChange}
@@ -90,7 +84,6 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Firmness (required)</label>
             <input
- 
               name="firmness"
               value={this.state.formData.firmness}
               onChange={this.handleChange}
@@ -105,7 +98,6 @@ class AddCheese extends Component {
                 <option value="true">Yes</option>
                 <option value="false">No</option>
             </select>
-
             </Form.Field>
           <Form.Field>
             <label>Gas Holes </label>
@@ -120,7 +112,6 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Texture </label>
             <input
- 
               name="texture"
               value={this.state.formData.texture}
               onChange={this.handleChange}
@@ -129,7 +120,6 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Image URL</label>
             <input
- 
               name="image"
               value={this.state.formData.image}
               onChange={this.handleChange}
