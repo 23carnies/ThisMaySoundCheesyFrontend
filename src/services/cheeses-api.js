@@ -1,5 +1,5 @@
 import tokenService from '../services/tokenService';
-const BASE_URL = '/api/cheeses/';
+const BASE_URL = '/api/api/';
 
 export function create(cheese) {
     return fetch(BASE_URL, {

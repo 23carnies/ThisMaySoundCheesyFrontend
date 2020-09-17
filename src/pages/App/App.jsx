@@ -11,6 +11,7 @@ import AddCheese from "../AddCheese/AddCheese"
 
 class App extends Component {
   state = {
+    cheeses: [],
     user: authService.getUser(),
   };
 
