@@ -8,6 +8,8 @@ import authService from "../../services/authService";
 import "./App.css";
 import * as cheeseAPI from "../../services/cheeses-api"
 import AddCheese from "../AddCheese/AddCheese"
+import EditCheesePage from "../EditCheesePage/EditCheesePage"
+import CheeseListPage from "../CheeseListPage/CheeseListPage"
 
 class App extends Component {
   state = {
@@ -31,6 +33,33 @@ class App extends Component {
     this.setState(state => ({
       cheeses: [...state.cheeses, newCheese]
     }), () => this.props.history.push('/cheeses'))
+  }
+
+  handleDeleteCheese = async id => {
+    if(authService.getUser()){
+      await cheeseAPI.deleteOne(id);
+      this.setState(state => ({
+        cheeses: state.cheeses.filter(m => m._id !== id)
+      }), () => this.props.history.push('/cheeses'));
+    } else {
+      this.props.history.push('/login')
+    }
+  }
+
+  handleUpdateCheese = async updatedCheeseData => {
+    const updatedCheese = await cheeseAPI.update(updatedCheeseData);
+    const newCheesesArray = this.state.cheeses.map(c => 
+      c._id === updatedCheese._id ? updatedCheese : c
+    );
+    this.setState(
+      {cheeses: newCheesesArray},
+      () => this.props.history.push('/cheeses')
+    );
+  }
+
+  async componentDidMount() {
+    const cheeses = await cheeseAPI.getAll();
+    this.setState(cheeses)
   }
 
   render() {
@@ -84,6 +113,28 @@ class App extends Component {
             <Redirect to ='/login' />
           }
         />
+          <Route 
+            exact path="/cheeses" render={() => 
+            <CheeseListPage 
+              cheeses={this.state.cheeses}
+              user={user}
+              handleDeleteCheese={this.handleDeleteCheeese}
+            />}
+          />
+          
+          <Route 
+        exact path='/edit' render={({location}) =>
+        authService.getUser() ?
+          <EditCheesePage 
+            handleUpdateCheese={this.handleUpdateCheese}
+            location={location}
+            user={user}
+          />
+          :
+          <Redirect to='/login' />
+        }/>
+
+          
       </>
     );
   }

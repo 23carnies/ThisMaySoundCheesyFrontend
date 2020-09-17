@@ -1,13 +1,14 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
-import { Link } 
+
 
 const CheeseCard = ({user, cheese, handleDeleteCheese}) => (
+  <>
   <Card>
     <Image src={cheese.image} wrapped ui={false} />
     <Card.Content>
       <Card.Header>{cheese.name ? cheese.name : cheese.category}</Card.Header>
-      <Card.Meta>{cheese.name ? cheese.category}</Card.Meta>
+      <Card.Meta>{cheese.category}</Card.Meta>
       <Card.Description>
         {cheese.country}
         {cheese.brand}
@@ -24,6 +25,7 @@ const CheeseCard = ({user, cheese, handleDeleteCheese}) => (
       </a>
     </Card.Content>
   </Card>
+  </>
 )
 
 export default CheeseCard
