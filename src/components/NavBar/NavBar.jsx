@@ -23,6 +23,16 @@ export default class NavBar extends Component {
           active={activeItem === 'testimonials'}
           onClick={this.handleItemClick}
         >
+          <a href="/cheeses">Cheeses</a>
+          Cheese
+        </Menu.Item>
+
+        <Menu.Item
+          name='add-cheese'
+          active={activeItem === 'testimonials'}
+          onClick={this.handleItemClick}
+        >
+          <a href="/add-cheese">Add Cheese</a>
           Cheese
         </Menu.Item>
 
