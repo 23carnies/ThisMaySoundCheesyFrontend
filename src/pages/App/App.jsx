@@ -72,7 +72,7 @@ class App extends Component {
           render={() => (user ? <Users /> : <Redirect to="/login" />)}
         />
         <Route 
-          exact path="/add-cheese"
+          exact path="/addcheese"
           render={(
             authService.getUser() ?
             <AddCheese 
