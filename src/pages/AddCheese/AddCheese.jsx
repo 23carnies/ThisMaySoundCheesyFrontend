@@ -3,7 +3,7 @@ import { Button, Form } from 'semantic-ui-react'
 
 class AddCheese extends Component {
   state = {
-    invalidForm: true,
+    invalidForm: false,
     formData: {
           name: '',
           category: '',
