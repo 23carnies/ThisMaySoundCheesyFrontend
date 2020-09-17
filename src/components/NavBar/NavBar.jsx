@@ -24,7 +24,6 @@ export default class NavBar extends Component {
           onClick={this.handleItemClick}
         >
           <a href="/cheeses">Cheeses</a>
-          Cheese
         </Menu.Item>
 
         <Menu.Item
@@ -33,7 +32,6 @@ export default class NavBar extends Component {
           onClick={this.handleItemClick}
         >
           <a href="/add-cheese">Add Cheese</a>
-          Cheese
         </Menu.Item>
 
         <Menu.Item
