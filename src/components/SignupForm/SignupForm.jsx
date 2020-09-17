@@ -42,18 +42,22 @@ class SignupForm extends Component {
       <Form autoComplete="off" onSubmit={this.handleSubmit}>
       <h3>Sign Up</h3>
           <Form.Field>
+          <label htmlFor="name">Name</label>
           <input
+            placeholder="John Doe"
             type="text"
             autoComplete="off"
             id="name"
             value={name}
             name="name"
             onChange={this.handleChange}
-          />
+          />  
           </Form.Field>
+          <br/>
           <Form.Field>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="email">Email</label>
           <input
+            placeholder="email@domain.com"
             type="text"
             autoComplete="off"
             id="email"
@@ -62,8 +66,9 @@ class SignupForm extends Component {
             onChange={this.handleChange}
           />
           </Form.Field>
+          <br/>
           <Form.Field>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             autoComplete="off"
@@ -73,8 +78,9 @@ class SignupForm extends Component {
             onChange={this.handleChange}
           />
           </Form.Field>
+          <br/>
           <Form.Field>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="confirm">Confirm Password</label>
           <input
             type="password"
             autoComplete="off"
@@ -83,7 +89,6 @@ class SignupForm extends Component {
             name="passwordConf"
             onChange={this.handleChange}
           />
-          <label htmlFor="confirm">Confirm Password</label>
           </Form.Field>
           <Button disabled={this.isFormInvalid()}>Sign Up</Button>
         </Form>

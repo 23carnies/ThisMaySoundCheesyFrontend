@@ -32,6 +32,7 @@ class Login extends Component {
   render() {
     const {email, pw} = this.state
     return (
+      <main>
       <Form onSubmit={this.handleSubmit}>
       <h3>Log In</h3>
         <Form.Field>
@@ -44,9 +45,10 @@ class Login extends Component {
           id="email"
           />
         </Form.Field>
+        <br/>
         <Form.Field>
           <label>Enter Password</label>
-          <Input 
+          <input 
           type='password' 
           value={pw} 
           onChange={this.handleChange}
@@ -56,6 +58,7 @@ class Login extends Component {
         </Form.Field>
         <Button type='submit'>Submit</Button>
       </Form>
+      </main>
     )
   }
 }
