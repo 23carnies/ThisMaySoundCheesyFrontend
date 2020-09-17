@@ -26,7 +26,7 @@ class App extends Component {
 
   handleAddCheese = async newCheeseData => {
     const newCheese = await cheeseAPI.create(newCheeseData)
-    newCheese.addedBy = {name. this.state.user.name, _id: this.state.user._id}
+    newCheese.addedBy = {name: this.state.user.name, _id: this.state.user._id}
     this.setState(state => ({
       cheeses: [...state.cheeses, newCheese]
     }), () => this.props.history.push('/cheeses'))

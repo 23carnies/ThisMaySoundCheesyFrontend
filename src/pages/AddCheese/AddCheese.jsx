@@ -10,8 +10,8 @@ class AddCheesePage extends Component {
           brand: '',
           color: '',
           firmness: '',
-          mould: False,
-          gasHoles: False,
+          mould: false,
+          gasHoles: false,
           texture: '',
           image: '',
         }
@@ -108,8 +108,8 @@ class AddCheesePage extends Component {
             <label>Gas Holes </label>
             <input
               className="form-control"
-              name="gas-holes"
-              value={this.state.formData.gas-holes}
+              name="gasHoles"
+              value={this.state.formData.gasHoles}
               onChange={this.handleChange}
             />
           </div>
