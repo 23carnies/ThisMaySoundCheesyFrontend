@@ -30,7 +30,7 @@ const CheeseCard = ({user, cheese, handleDeleteCheese}) => (
               state: {cheese}
           }}
       >
-        Edit Cheese
+        <Button basic color='yellow'>Edit Cheese</Button>
       </Link>
       <Button basic color='red' onClick={() => handleDeleteCheese(cheese._id)}>Delete</Button>
     </Card.Content>
