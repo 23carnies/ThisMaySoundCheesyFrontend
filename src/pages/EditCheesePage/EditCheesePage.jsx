@@ -26,7 +26,7 @@ class EditCheesePage extends Component {
     return (
         <>
         <Form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-        <h1>Add Cheese</h1>
+        <h1>Edit Cheese</h1>
           <Form.Field>
             <label>Cheese Name</label>
             <input
