@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const CheeseCard = ({user, cheese, handleDeleteCheese}) => (
   <>
   <Card>
-    <Image src='{cheese.image}' wrapped ui={false} />
+    <Image src={cheese.image} wrapped ui={false} />
     <Card.Content>
       <Card.Header>{cheese.name ? cheese.name : cheese.category}</Card.Header>
       <Card.Meta>Category: {cheese.category}</Card.Meta>
@@ -30,7 +30,7 @@ const CheeseCard = ({user, cheese, handleDeleteCheese}) => (
               state: {cheese}
           }}
       >
-        Edit Cheese
+        <Button basic color='yellow'>Edit Cheese</Button>
       </Link>
       <Button basic color='red' onClick={() => handleDeleteCheese(cheese._id)}>Delete</Button>
     </Card.Content>

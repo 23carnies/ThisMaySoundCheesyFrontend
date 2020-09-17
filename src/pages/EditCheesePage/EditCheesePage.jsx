@@ -19,7 +19,6 @@ class EditCheesePage extends Component {
     const formData = {...this.state.formData, [e.target.name]: e.target.value};
     this.setState({
       formData,
-      invalidForm: !this.formRef.current.checkValidity()
     });
   };
 
@@ -120,7 +119,7 @@ class EditCheesePage extends Component {
           >
             SAVE CHEESE
           </Button>
-          <Link to='/'>CANCEL</Link>
+          <Link to='/cheeses'><Button basic color='red'>CANCEL</Button></Link>
         </Form>
         </>
     );
