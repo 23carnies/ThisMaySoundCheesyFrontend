@@ -38,8 +38,8 @@ class AddCheese extends Component {
 
   render() {
     return (
-        <div>
-        <Form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+        <>
+        <Form id="cf" ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
         <h1>Add Cheese</h1>
           <Form.Field>
             <label>Cheese Name</label>
@@ -134,7 +134,7 @@ class AddCheese extends Component {
             ADD CHEESE
           </Button>
         </Form>
-        </div>
+        </>
     );
   }
 }
