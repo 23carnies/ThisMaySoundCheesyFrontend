@@ -73,15 +73,15 @@ class App extends Component {
         />
         <Route 
           exact path="/addcheese"
-          render={(
+          render={() =>
             authService.getUser() ?
             <AddCheese 
               handleAddCheese = {this.handleAddCheese}
-              user={this.state.user}
+              user={user}
             />
             :
             <Redirect to ='/login' />
-          )}
+          }
         />
       </>
     );
