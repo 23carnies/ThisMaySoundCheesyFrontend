@@ -59,7 +59,8 @@ class App extends Component {
 
   async componentDidMount() {
     const cheeses = await cheeseAPI.getAll();
-    this.setState(cheeses)
+    console.log(cheeses)
+    this.setState({cheeses})
   }
 
   render() {
@@ -118,7 +119,7 @@ class App extends Component {
             <CheeseListPage 
               cheeses={this.state.cheeses}
               user={user}
-              handleDeleteCheese={this.handleDeleteCheeese}
+              handleDeleteCheese={this.handleDeleteCheese}
             />}
           />
           
