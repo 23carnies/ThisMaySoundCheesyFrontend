@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import './signup.css'
-import { Form, Input, Button } from 'semantic-ui-react'
 import authService from "../../services/authService";
 
 class SignupForm extends Component {
@@ -39,9 +37,9 @@ class SignupForm extends Component {
   render() {
     const { name, email, password, passwordConf } = this.state;
     return (
-      <Form autoComplete="off" onSubmit={this.handleSubmit}>
-      <h3>Sign Up</h3>
-          <Form.Field>
+      <div>
+        <h3>Sign Up</h3>
+        <form autoComplete="off" onSubmit={this.handleSubmit}>
           <input
             type="text"
             autoComplete="off"
@@ -50,8 +48,6 @@ class SignupForm extends Component {
             name="name"
             onChange={this.handleChange}
           />
-          </Form.Field>
-          <Form.Field>
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -61,8 +57,6 @@ class SignupForm extends Component {
             name="email"
             onChange={this.handleChange}
           />
-          </Form.Field>
-          <Form.Field>
           <label htmlFor="email">Email</label>
           <input
             type="password"
@@ -72,8 +66,6 @@ class SignupForm extends Component {
             name="password"
             onChange={this.handleChange}
           />
-          </Form.Field>
-          <Form.Field>
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -84,9 +76,11 @@ class SignupForm extends Component {
             onChange={this.handleChange}
           />
           <label htmlFor="confirm">Confirm Password</label>
-          </Form.Field>
-          <Button disabled={this.isFormInvalid()}>Sign Up</Button>
-        </Form>
+          <button disabled={this.isFormInvalid()}>Sign Up</button>
+          &nbsp;&nbsp;
+          <Link to="/">Cancel</Link>
+        </form>
+      </div>
     );
   }
 }
