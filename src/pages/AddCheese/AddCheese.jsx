@@ -41,9 +41,9 @@ class AddCheese extends Component {
         <Form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
         <h1>Add Cheese</h1>
           <Form.Field>
-            <label>Cheese Name (required)</label>
+            <label>Cheese Name</label>
             <input
-              className="form-control"
+ 
               name="name"
               value={this.state.formData.name}
               onChange={this.handleChange}
@@ -53,7 +53,7 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Category(required)</label>
             <input
-              className="form-control"
+ 
               name="category"
               value={this.state.formData.category}
               onChange={this.handleChange}
@@ -63,7 +63,7 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Country</label>
             <input
-              className="form-control"
+ 
               name="country"
               value={this.state.formData.country}
               onChange={this.handleChange}
@@ -72,7 +72,7 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Brand</label>
             <input
-              className="form-control"
+ 
               name="brand"
               value={this.state.formData.brand}
               onChange={this.handleChange}
@@ -81,7 +81,7 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Color</label>
             <input
-              className="form-control"
+ 
               name="color"
               value={this.state.formData.color}
               onChange={this.handleChange}
@@ -90,7 +90,7 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Firmness (required)</label>
             <input
-              className="form-control"
+ 
               name="firmness"
               value={this.state.formData.firmness}
               onChange={this.handleChange}
@@ -98,26 +98,29 @@ class AddCheese extends Component {
           </Form.Field>
           <Form.Field>
             <label>Mould </label>
-            <input
-              className="form-control"
-              name="mould"
-              value={this.state.formData.mould}
-              onChange={this.handleChange}
-            />
+            <select 
+            name="mould" 
+            value={this.state.formData.mould}
+            onChange={this.handleChange}>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
             </Form.Field>
           <Form.Field>
             <label>Gas Holes </label>
-            <input
-              className="form-control"
-              name="gasHoles"
-              value={this.state.formData.gasHoles}
-              onChange={this.handleChange}
-            />
+            <select 
+            name="gasHoles" 
+            value={this.state.formData.gasHoles}
+            onChange={this.handleChange}>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
           </Form.Field>
           <Form.Field>
             <label>Texture </label>
             <input
-              className="form-control"
+ 
               name="texture"
               value={this.state.formData.texture}
               onChange={this.handleChange}
@@ -126,7 +129,7 @@ class AddCheese extends Component {
           <Form.Field>
             <label>Image URL</label>
             <input
-              className="form-control"
+ 
               name="image"
               value={this.state.formData.image}
               onChange={this.handleChange}
